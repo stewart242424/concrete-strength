@@ -1,0 +1,21 @@
+dataset: Concrete compressive strength
+source: UCI Machine Learning Repository
+original_author: I-Cheng Yeh (1998)
+doi: 10.24432/C5PK67
+license: CC BY 4.0
+downloaded: 2026-10-18
+data_type: laboratory experiments
+row: one concrete sample (one mix tested at one age)
+columns:
+  cement:           {unit: kg/m3, type: float}
+  slag:             {unit: kg/m3, type: float, note: "0 = not added"}
+  fly_ash:          {unit: kg/m3, type: float, note: "0 = not added"}
+  water:            {unit: kg/m3, type: float}
+  superplasticizer: {unit: kg/m3, type: float, note: "0 = not added"}
+  coarse_agg:       {unit: kg/m3, type: float}
+  fine_agg:         {unit: kg/m3, type: float}
+  age:              {unit: days, type: int}
+  strength:         {unit: MPa, type: float, role: target}
+missing_value: none in the original file
+processing: raw/Concrete_Data.xls -> scripts/clean_concrete.py -> processed/concrete_clean.csv
+unknown: specimen size, test standard, curing conditions (not given by the source)
